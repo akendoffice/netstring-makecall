@@ -1,0 +1,22 @@
+{
+  "name": "netstring-makecall",
+  "version": "1.0.0",
+  "description": "netstring makecall",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "aelengovan",
+  "dependencies": {
+  },
+  "devDependencies":{
+    "mocha":"^2.0.0",
+    "chai":"*"
+  },
+  "publishConfig":{
+    "registry":"http://npm.paypal.com"
+  }
+}
