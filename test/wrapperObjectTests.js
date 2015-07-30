@@ -1,0 +1,32 @@
+var chai = require('chai');
+ 
+chai.config.includeStack = true;
+ 
+global.expect = chai.expect;
+global.AssertionError = chai.AssertionError;
+global.Assertion = chai.Assertion;
+global.assert = chai.assert;
+
+//var assert = require('assert');
+var wrapObjects = require('../invocation/wrapperObjects.js');
+
+describe('testWrapperObjects', function(){
+  it('create a new object of type CipherDataObject', function(){
+  	var cipherDataObject = new wrapObjects.CipherDataObject();
+  	assert(cipherDataObject.keyId == "", "keyId should be Empty for an empty object");
+  	assert(cipherDataObject.encodedData != "someString", "encodedData should be empty for an empty object");
+  	assert(cipherDataObject.isPKCS7 == false, "isPKCS7 should be false for an empty object");
+  });
+
+  it('retrieve constant value correctly', function(){
+  	var cipherDataObject = new wrapObjects.CipherDataObject();
+  	cipherDataObject.setKeyId("crypt_util_key");
+  	cipherDataObject.setEncodedData("some-encoded-data");
+  	cipherDataObject.setSignedData("some-signed-data");
+  	cipherDataObject.setIsPKCS7(true);
+  	cipherDataObject.setIsVerified(true);
+  	//var cipherDataObject2 = new wrapObjects.CipherDataObject();
+  	//assert(cipherDataObject != cipherDataObject2, "Symmetric nature not expected");
+  	console.log(JSON.stringify(cipherDataObject));
+  });
+})
