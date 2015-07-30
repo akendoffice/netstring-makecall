@@ -1,5 +1,5 @@
 var assert = require('assert');
-var constants = require('../net/netstringConstants.js');
+var constants = require('../net/NetstringConstants');
 
 describe('netStringConstants', function(){
   it('should return an array', function(){

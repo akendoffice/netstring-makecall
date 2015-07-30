@@ -72,3 +72,39 @@ function TCPRequestObject(){
 	};
 
 };
+
+function TCPResponseObject(){
+	this.response_code = -1;
+	this.request_id = "";
+	this.result;
+	this.errorObject;
+
+	this.setResponseCode = function (response_code){
+		this.response_code = response_code;
+	};
+
+	this.setRequestId = function (request_id) {
+		this.request_id = request_id;
+	};
+
+	this.setResult = function(result) {
+		this.result = result;
+	};
+
+	this.setError = function(errorObject) {
+		this.errorObject = errorObject;
+	}
+};
+
+function ErrorObject(){
+	this.error_code = -1;
+	this.error_msg = "";
+
+	this.setErrorCode = function(error_code) {
+		this.error_code = error_code;
+	};
+
+	this.setErrorMsg = function(error_msg) {
+		this.error_msg = error_msg;
+	};
+};
