@@ -6,11 +6,11 @@ module.exports = {
 };
 
 function CipherDataObject(){
-	this.keyId = "";
-	this.encodedData = "";
-	this.signedData = "";
-	this.isPKCS7 = false;
-	this.isVerified = false;
+	this.keyId;
+	this.encodedData;
+	this.signedData;
+	this.isPKCS7;
+	this.isVerified;
 
 	this.setKeyId = function(keyId){
 		this.keyId = keyId;
@@ -35,11 +35,11 @@ function CipherDataObject(){
 
 function TCPRequestObject(){
 
-	this.operation = "";
-	this.version = 0;
-	this.app_name = "";
-	this.correlation_id = "";
-	this.secret = "";
+	this.operation;
+	this.version;
+	this.app_name;
+	this.correlation_id;
+	this.secret;
 	this.params;
 
 	this.setOperation = function (operation) {
@@ -69,8 +69,8 @@ function TCPRequestObject(){
 };
 
 function TCPResponseObject(){
-	this.response_code = -1;
-	this.request_id = "";
+	this.response_code;
+	this.request_id;
 	this.result;
 	this.errorObject;
 
@@ -92,8 +92,8 @@ function TCPResponseObject(){
 };
 
 function ErrorObject(){
-	this.error_code = -1;
-	this.error_msg = "";
+	this.error_code;
+	this.error_msg;
 
 	this.setErrorCode = function(error_code) {
 		this.error_code = error_code;

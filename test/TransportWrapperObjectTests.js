@@ -12,9 +12,9 @@ var wrapObjects = require('../invocation/TransportWrapper');
 describe('testWrapperObjects', function(){
   it('create a new object of type CipherDataObject', function(){
   	var cipherDataObject = new wrapObjects.CipherDataObject();
-  	assert(cipherDataObject.keyId == "", "keyId should be Empty for an empty object");
+  	assert(cipherDataObject.keyId == null, "keyId should be null for an empty object");
   	assert(cipherDataObject.encodedData != "someString", "encodedData should be empty for an empty object");
-  	assert(cipherDataObject.isPKCS7 == false, "isPKCS7 should be false for an empty object");
+  	assert(cipherDataObject.isPKCS7 == null, "isPKCS7 should be null for an empty object");
   });
 
   it('retrieve constant value correctly', function(){
