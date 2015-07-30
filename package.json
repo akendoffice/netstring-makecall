@@ -14,10 +14,9 @@
   },
   "devDependencies":{
     "mocha":"^2.0.0",
-    "chai":"*",
-    "netstring-stream":"*"
+    "chai":"*"
   },
   "publishConfig":{
-    "registry":"http://npm.paypal.com"
+    "registry":""
   }
 }
