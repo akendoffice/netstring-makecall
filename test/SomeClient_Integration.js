@@ -1,7 +1,8 @@
 // KMSClient.js
 
 var wrapObjects = require('../invocation/TransportWrapper');
-var Netstring = require('netstring-stream');
+//var Netstring = require('netstring-stream');
+var netstr = require('../net/NetstringObject');
 
 describe('printOutFinalObjectInString', function(){
   it('type1', function(){
@@ -19,14 +20,24 @@ describe('printOutFinalObjectInString', function(){
 
 
     tcpObj.setParams(cipherDataObject);
-  	
+  	console.log("Pure TCPRequestObject :");
     console.log(JSON.stringify(tcpObj));
     //Using netstring-stream
     //var bytes = System.Text.Encoding.UTF8.GetBytes(JSON.stringify(tcpObj));
-    console.log("Before NetString conversion");
-    var netStringData = Netstring.write(JSON.stringify(tcpObj), "utf8");
+
+    /** works ***/
+    // console.log("Before NetString conversion");
+    // var netStringData = Netstring.write(JSON.stringify(tcpObj), "utf8");
+    // console.log(netStringData.toString('utf-8'));
+    // console.log("After NetString conversion");
+    /** works **/
+    var netStrObj = new netstr.RFCNetStringObj();
+    netStrObj.setData(JSON.stringify(tcpObj));
+    var netStringData = netStrObj.convertToNetStringBuffer();
+    console.log("Netstring in Str format: ");
     console.log(netStringData.toString('utf-8'));
-    console.log("After NetString conversion")
+    console.log("NetString in hex format: ");
+    console.log(netStringData.toString('hex'));
 
   });
 })

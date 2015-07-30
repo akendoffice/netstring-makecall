@@ -2,7 +2,9 @@
 
 module.exports = {
         CipherDataObject: CipherDataObject,
-        TCPRequestObject: TCPRequestObject
+        TCPRequestObject: TCPRequestObject,
+        TCPResponseObject: TCPResponseObject,
+        ErrorObject: ErrorObject
 };
 
 function CipherDataObject(){
