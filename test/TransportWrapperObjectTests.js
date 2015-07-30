@@ -7,7 +7,6 @@ global.AssertionError = chai.AssertionError;
 global.Assertion = chai.Assertion;
 global.assert = chai.assert;
 
-//var assert = require('assert');
 var wrapObjects = require('../invocation/TransportWrapper');
 
 describe('testWrapperObjects', function(){
