@@ -15,7 +15,8 @@
   "devDependencies":{
     "mocha":"^2.0.0",
     "chai":"*",
-    "socket-pool":"*"
+    "socket-pool":"*",
+    "jackpot":"*"
   },
   "publishConfig":{
     "registry":""

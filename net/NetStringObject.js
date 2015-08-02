@@ -1,5 +1,5 @@
 'use strict';
-
+var netstringConstant = require('./NetstringConstants');
 module.exports = {
 	RFCNetStringObj: RFCNetStringObj
 };
@@ -25,3 +25,38 @@ function RFCNetStringObj(){
 	};
 
 };
+
+// function RFCNetStringReader(buff){
+// 	var data;
+// 	var nsLength = 0;
+// 	const ZERO = 0;
+// 	//Read till we get the netstring's length
+
+// 	while(true){
+// 		data = buff;
+// 		if(data == null){
+// 			console.log("DATA IS NULL");
+// 		}
+// 		// Read from the stream till we receive a CHARACTER_COLON so that
+// 		// we can calculate the length of the netstring.
+// 		// Based on the length we will read that many bytes from the socket stream.
+// 		if(data != netstringConstant.CHARACTER_COLON) {
+// 			if(data != ZERO) {
+// 				nsLength = nsLength * 10 + (data - netstringConstant.CHARACTER_ZERO);
+// 			}
+// 		} else {
+// 			break;
+// 		}
+// 	}
+
+// 	var baos;
+// 	var content = new Buffer(65536);
+// 	var bytesRead = -1;
+
+// 	while( (baos.length < nsLength) && (bytesRead = buff))
+
+// 	var buffer; // need to check
+// 	var netStrObj = new RFCNetStringObj();
+
+// 	buffer = 
+// };
