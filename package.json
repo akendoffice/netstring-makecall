@@ -1,24 +1,30 @@
 {
-  "name": "netstring-makecall",
-  "version": "1.0.0",
-  "description": "netstring makecall",
-  "scripts": {
-    "test": "make test"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "aelengovan",
-  "dependencies": {
-  },
-  "devDependencies":{
-    "mocha":"^2.0.0",
-    "chai":"*",
-    "socket-pool":"*",
-    "jackpot":"*"
-  },
-  "publishConfig":{
-    "registry":""
-  }
+    "name": "netstring-confabulator",
+    "version": "1.0.0",
+    "description": "Stand-Alone module to handle netstring based communication with another party",
+    "scripts": {
+        "pretest": "eslint index.js lib test",
+        "test": "mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:akendoffice/netstring-makecall.git"
+    },
+    "author": "AK <akendoffice@gmail.com> ",
+    "publishConfig": {
+        "registry": "http://npm.com"
+    },
+    "dependencies": {
+        "netstring-stream": "~0.1.2",
+        "generic-pool": "^2.2.0",
+        "try-require": "^1",
+        "nconf": "~0.7.2"
+    },
+    "devDependencies": {
+        "eslint": "^1",
+        "mocha": "^2.0.0",
+        "chai": "^2",
+        "vault": "^1",
+        "sleep": "~3.0.0"
+    }
 }
