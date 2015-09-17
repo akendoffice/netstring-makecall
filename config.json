@@ -1,0 +1,9 @@
+{
+    "thirdParty_host" : "127.0.0.1",
+    "thirdParty_port" : 8901,
+    "initialMinConn" : 2,
+    "initialMaxConn" : 20,
+    "idleTimeOutForConn" : 60000,
+    "frequencyToCheckIdleConn" : 5000,
+    "isGenericPoolLogEnabled" : false
+}
